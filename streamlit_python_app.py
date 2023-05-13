@@ -2,10 +2,8 @@ import re
 from numpy import size
 import streamlit as st
 import io
-import boto3
 import requests
 import openai
-from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 import os
 from qdrant_client import QdrantClient
@@ -47,13 +45,12 @@ openai_result = None
 evidence_dictionary = None
 
 #state variable
-if 'key' not in st.session_state:
-    st.session_state['evidence_dictionary_list'] = []
+st.session_state['evidence_dictionary_list'] = []
 
 def callOpenAI(userQuery):
-    
+
     #LANGCHAIN CONFIG
-    template = """You are to act as Socrates the philosopher. The user will ask you questions and I want you to answer based on what Socrates would do or say. I've attached quotes from Socrates himself to help you answer the user's questions. When answering my questions use the contexual evidence only and do not derive information outside of the contextual evidence. Do not contrive or fabricate answers."
+    template = """You are to act as Aristotle the philosopher. The user will ask you questions and I want you to answer based on what Aristotle would do or say. I've attached quotes from Aristotle himself to help you answer the user's questions as his persona. When answering my questions use the contexual evidence only and do not derive information outside of the contextual evidence. Do not contrive or fabricate answers."
     Evidence:{evidence}
     Question:{question}
     Answer: Think step by step."""
