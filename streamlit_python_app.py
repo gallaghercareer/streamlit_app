@@ -30,7 +30,7 @@ s3_bucket_name = 'your-bucket-name'  # Replace with your S3 bucket name
 QDRANT_SECRET_API_KEY = st.secrets["QDRANT_SECRET_API_KEY"]
 qdrant_client = QdrantClient(
     url="https://9b8c4946-25cb-4ed6-9953-9ebb6b7406d3.us-east-1-0.aws.cloud.qdrant.io:6333", 
-    api_key=QDRANT_SECRET_API_KEY )
+    api_key=st.secrets["QDRANT_SECRET_API_KEY"] )
 
 #OpenAI configuration
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
