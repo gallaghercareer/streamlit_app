@@ -55,7 +55,7 @@ pandas==2.0.1
 Pillow==9.5.0
 pluggy @ file:///tmp/build/80754af9/pluggy_1648024709248/work
 portalocker==2.7.0
-protobuf==3.20.3
+protobuf>=3.20.0
 pyarrow==12.0.0
 pycosat @ file:///croot/pycosat_1666805502580/work
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
