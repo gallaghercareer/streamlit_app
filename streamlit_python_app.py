@@ -53,7 +53,7 @@ def callOpenAI(userQuery):
     template = """You are to act as Aristotle the philosopher. The user will ask you questions and I want you to answer based on what Aristotle would do or say. I've attached quotes from Aristotle himself to help you answer the user's questions as his persona. When answering my questions use the contexual evidence only and do not derive information outside of the contextual evidence. Do not contrive or fabricate answers."
     Evidence:{evidence}
     Question:{question}
-    Answer: Think step by step."""
+    """
        
     prompt = PromptTemplate(template=template, input_variables=["question","evidence"])
 
